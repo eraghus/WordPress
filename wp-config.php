@@ -29,7 +29,7 @@ define( 'DB_USER', 'b55ba2f67c5239' );
 define( 'DB_PASSWORD', 'd51d51ea' );
 
 /** Database hostname */
-define( 'DB_HOST', 'b55ba2f67c5239:d51d51ea@us-cdbr-east-06.cleardb.net' );
+define( 'DB_HOST', 'us-cdbr-east-06.cleardb.net' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
