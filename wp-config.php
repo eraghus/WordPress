@@ -23,20 +23,17 @@
 define( 'DB_NAME', 'database_name_here' );
 
 /** Database username */
-define( 'DB_USER', 'username_here' );
-
-/** Database password */
-define( 'DB_PASSWORD', 'password_here' );
-
-/** Database hostname */
-define( 'DB_HOST', 'localhost' );
-
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
-
-/** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
-
+if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
+    $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]);
+    define(‘DB_NAME’, trim($db[`path`],`/`));
+    define(‘DB_USER’, $db[`user`]);
+    define(‘DB_PASSWORD’, $db[`pass`]);
+    define(‘DB_HOST’, $db[`host`]);
+    define(‘DB_CHARSET’, ‘utf8’);
+    define(‘DB_COLLATE’, ‘’);
+} else {
+    die(‘No Database credentials!’);
+}
 /**#@+
  * Authentication unique keys and salts.
  *
