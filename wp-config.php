@@ -20,13 +20,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'heroku_4af086804d4259f' );
+define( 'DB_NAME', 'heroku_d88f3bf6d10840d' );
 
 /** Database username */
-define( 'DB_USER', 'b55ba2f67c5239' );
+define( 'DB_USER', 'b2c2d9c77b38e5' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'd51d51ea' );
+define( 'DB_PASSWORD', '68957461' );
 
 /** Database hostname */
 define( 'DB_HOST', 'us-cdbr-east-06.cleardb.net' );
