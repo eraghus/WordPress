@@ -83,7 +83,8 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+define('WP_SITEURL', 'https://blog.digimanifest.store');
+define('WP_HOME', 'https://blog.digimanifest.store');
 
 /* That's all, stop editing! Happy publishing. */
 
