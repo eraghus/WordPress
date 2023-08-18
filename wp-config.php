@@ -20,17 +20,43 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
-    $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]);
-    define(‘DB_NAME’, trim($db[`path`],`/`));
-    define(‘DB_USER’, $db[`user`]);
-    define(‘DB_PASSWORD’, $db[`pass`]);
-    define(‘DB_HOST’, $db[`host`]);
-    define(‘DB_CHARSET’, ‘utf8’);
-    define(‘DB_COLLATE’, ‘’);
-} else {
-    die(‘No Database credentials!’);
-}
+define( 'DB_NAME', 'database_name_here' );
+
+/** Database username */
+define( 'DB_USER', 'username_here' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'password_here' );
+
+/** Database hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         ')}#+*xsatb*9l@[8=YZW6J-t%TT2D?vb:BX-*gaU,Mg>$sOh1VS=*Tr>L?lCN^w,');
+define('SECURE_AUTH_KEY',  '`P#:F)uQsfVY2OXPZ.OCoGSkY3N|?^o[+NWBFa!0{e~R-o &WAOgAMS[:v kLP48');
+define('LOGGED_IN_KEY',    '9DQ?]~KnB<Vi]4>E:8(N_pP2,S%.e|qWe6DFUei&&;l}7R-QG#W?)#3WEn/|Xbs{');
+define('NONCE_KEY',        '8<|yme@_(LfKP_@fGd=q]FiI-c!~f 1z3]X#|4L-F8B??hI8s+[tL01Iy-l+H l_');
+define('AUTH_SALT',        '`G Q4ZCGKx[G0*97m>6!N:bkc>2N-uP+,:]bF}PqJ#K.B4PCo1z}&KiV!3F-YG)x');
+define('SECURE_AUTH_SALT', '<@R@rt!.XxEX%gbP/i|0L+qz8>eE^[a1vU?2L- rZ/=VGrD|3JX*(f/rmIXO_uBe');
+define('LOGGED_IN_SALT',   'cX2%xPm70QCL-e/)~O||ide-%tc*`-Ct(TVq(`E?BeU9S+a9Z|+.)B|&k0`fx.:^');
+define('NONCE_SALT',       'Hky}gka)Q0a2A+|gW:k&+P-=L>(KYD4IDf_zIHp2;g.fCdxrmp%jm@}^4bW)t{|!');
+
 /**#@-*/
 
 /**
