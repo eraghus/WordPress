@@ -20,34 +20,6 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
-
-/** Database username */
-define( 'DB_USER', 'username_here' );
-
-/** Database password */
-define( 'DB_PASSWORD', 'password_here' );
-
-/** Database hostname */
-define( 'DB_HOST', 'localhost' );
-
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
-
-/** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
-
-/**#@+
- * Authentication unique keys and salts.
- *
- * Change these to different unique phrases! You can generate these using
- * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
- *
- * You can change these at any point in time to invalidate all existing cookies.
- * This will force all users to have to log in again.
- *
- * @since 2.6.0
- */
 if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
     $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]);
     define(‘DB_NAME’, trim($db[`path`],`/`));
@@ -59,7 +31,6 @@ if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
 } else {
     die(‘No Database credentials!’);
 }
-
 /**#@-*/
 
 /**
