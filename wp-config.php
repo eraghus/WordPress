@@ -83,7 +83,9 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+//Begin Really Simple SSL Server variable fix
+   $_SERVER["HTTPS"] = "on";
+//END Really Simple SSL 
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
