@@ -29,7 +29,7 @@ define( 'DB_USER', 'uhujq5pvq2wilbx' );
 define( 'DB_PASSWORD', 'h75YjKR*s#yB9rRb5G9z8OGCT' );
 
 /** Database hostname */
-define( 'DB_HOST', ' eu-az-sql-serv1.database.windows.net' );
+define( 'DB_HOST', 'eu-az-sql-serv1.database.windows.net' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
